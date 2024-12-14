@@ -1,0 +1,565 @@
+body {
+    background: linear-gradient(
+        to right, 
+        rgb(167 26 3), 
+        rgb(211 43 16 / 8%), 
+        rgb(207 62 38 / 65%) 
+    );
+    overflow-x: hidden;
+}
+
+
+/* Header Section */
+.header-section {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0;
+    width: 100%;
+    background-color: #d917177a;
+    padding: 10px 20px;  scroll-behavior: smooth;
+    display: flex;
+    justify-content: start; 
+    align-items: center;
+    z-index: 1000;
+    margin: 0; 
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+
+/* Logo Icon with Semi-Circular Animation */
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    animation: swing 2s ease-in-out infinite; 
+    transform-origin: center center; 
+}
+
+/* Define the swing animation */
+@keyframes swing {
+    0% {
+        transform: rotate(0deg); 
+    }
+    50% {
+        transform: rotate(45deg); 
+    }
+    100% {
+        transform: rotate(0deg); 
+    }
+}
+
+
+.logo-name {
+    font-size: 24px;
+    color: white;
+    font-family: fangsong;
+    font-weight: bold;
+}
+
+.menubar {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.menubar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menubar ul li {
+    margin: 0 20px;
+}
+
+.menubar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.menubar ul li a:hover {
+    color: #f1c40f;
+}
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////// */
+.hero-section {
+    height: 100vh;
+    background-image: url('https://www.lighttrybe.ng/wp-content/uploads/2023/11/buy-christmas-trees-in-Nigeria.jpg');
+    background-size: cover;
+    /* Options: auto, cover, contain, or specific dimensions */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Hero Section Animation */
+.hero-section h1, .hero-section p {
+    opacity: 0; 
+    transform: translateX(100%); 
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.hero-section h1 {
+    font-size: 5rem;
+    font-family: fangsong;
+    animation-name: slideInLeft; 
+}
+
+.hero-section p {
+    font-size: 1.8rem;
+    font-family: fangsong;
+    animation-name: slideInRight; 
+}
+
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%); 
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%); 
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* Falling Flakes Animation */
+.falling-flakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+        /* Flake Style */
+        .flake {
+            position: absolute;
+            top: -10px;
+            /* color: #FFD700 !important;   */
+            font-size: 12px;
+            animation: fall 5s linear infinite, glitter 1s ease-in-out infinite alternate;
+            opacity: 0.9;
+        }
+
+        /* Falling Animation */
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Glittering Effect */
+        @keyframes glitter {
+            0% {
+                text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700;
+            }
+            50% {
+                text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 50px #FFD700;
+            }
+            100% {
+                text-shadow: 0 0 15px #FFD700, 0 0 25px #FFD700, 0 0 35px #FFD700;
+            }
+        }
+
+
+
+
+/* @keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+/* .feature-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+} */
+
+.event-section {
+    padding: 2rem;
+  }
+  
+  .event-cards-container {
+    margin-top: 10px;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    gap: 1rem;
+  }
+  
+  .event-card {
+    flex: 0 0 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-bottom:3px solid rgb(138, 3, 3);
+
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .event-card-image {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .event-card-caption {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+
+  .event-section-heading {
+    font-size: 2rem;          
+    font-weight: bold;        
+    text-align: center;      
+    margin-bottom: 1rem;  
+    color:#890303;             
+  }
+  
+
+
+  /* lunch section */
+  /* .lunch-section {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid linear-gradient(to right, transparent, transparent 50%, #910404);
+  } */
+
+  .lunch-section {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+  }
+  
+  .lunch-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 97%;
+    height: 2px; /* Thickness of the "border" */
+    background: linear-gradient(to right, transparent, transparent 50%, #910404);
+  }
+  
+  .lunch-card {
+    display: flex;
+    position: relative;
+    /* background-color: #fff; */
+    border-radius: 12px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    height: 500px;
+    width: 800px;
+  }
+  
+  .lunch-image {
+    position: relative;
+    width: 70%; /* Image takes up half the card */
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .lunch-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+
+
+  .bottom-right-image {
+  position: absolute;
+    bottom: 0;
+    top: -285px;
+    right: -300px;
+    max-width: 70%;
+    height: 1500px;
+    /* width: 1000px; */
+    pointer-events: none;
+   
+  }
+  
+  /* Add a zoom effect on hover */
+  .lunch-card:hover .lunch-image img {
+    transform: scale(1.1);
+  }
+  
+  .lunch-description {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateY(-50%); 
+    width: 50%; 
+    background-color: #ffffff87;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    z-index: 2; 
+  }
+  
+  /* Add a 3D shadow effect */
+  .lunch-card:hover .lunch-description {
+    transform: translateY(-50%) scale(1.05); /* Slight zoom */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); */
+  }
+  
+  .lunch-description h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 1rem;
+  }
+  
+  .lunch-description p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #343a40;
+  }
+  
+
+
+    /* Swinging Animation */
+    @keyframes swing {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(15deg); }
+        50% { transform: rotate(0deg); }
+        75% { transform: rotate(-15deg); }
+        100% { transform: rotate(0deg); }
+    }
+
+    .christmas-bell {
+        animation: swing 2s infinite;
+        transform-origin: top center;
+    }
+
+    /* Reset link styling for demo */
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        color: red;
+    }
+
+
+
+
+    /* game-section */
+    .games-section {
+        padding: 2rem;
+        text-align: center;
+      }
+  
+      .games-heading {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        color: #333;
+      }
+  
+      .games-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 0 1rem;
+      }
+  
+      .game-card {
+        position: relative;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        box-shadow: 0 6px 8px rgb(0, 0, 0 , 58%);
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+      }
+  
+      .game-card:hover {
+        transform: scale(1.05);
+      }
+  
+      .game-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        text-align: center;
+        pointer-events: none;
+      }
+
+
+      /* Divider Section */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    position: relative;
+  }
+  
+  .divider-image {
+    position: absolute;
+    right: -300px;
+    bottom: -655px;
+    width: 73%;
+  }
+
+ 
+  
+  .divider-line {
+    width: 100%;
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, transparent 50%, #910404);
+    margin: 0 1rem;
+  }
+  
+
+
+  /* invitation */
+  .invitation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    /* background-color: #fff5f5; */
+    border-radius: 12px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .invitation-card {
+    text-align: center;
+    background: linear-gradient(
+        to right, 
+        rgb(129, 20, 3), 
+        rgba(96, 15, 3, 0.895), 
+        rgba(207, 63, 38, 0.815) 
+    );
+    /* background-color: #ffffff; */
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .invitation-title {
+    font-size: 2rem;
+    color: #fff7f7e0;
+    margin-bottom: 1rem;
+  }
+  
+  .invitation-message {
+    font-size: 1.2rem;
+    color: #e0d0d0;
+    line-height: 1.6;
+  }
+  
+  .invitation-details {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #ffe2e2;
+  }
+  
+  .invitation-closing {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #fafafa;
+  }
+  
+
+
+
+
