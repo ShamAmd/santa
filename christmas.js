@@ -97,6 +97,9 @@ const eventsData = [
     });
 }
 
+
+// 
+
   
   function loopEventCards() {
     createEventCards();

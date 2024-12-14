@@ -242,6 +242,14 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 } */
 
+
+::-webkit-scrollbar {
+  width: 10px; 
+  height: 5px; 
+  background-color: rgb(138, 3, 3);
+  cursor: pointer;
+}
+
 .event-section {
     padding: 2rem;
   }
@@ -249,7 +257,7 @@ body {
   .event-cards-container {
     margin-top: 10px;
     display: flex;
-    overflow-x: hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
     gap: 1rem;
   }
@@ -292,6 +300,7 @@ body {
     margin-bottom: 1rem;  
     color:#890303;             
   }
+
   
 
 
@@ -481,7 +490,7 @@ body {
 
 
       /* Divider Section */
-.divider {
+/* .divider {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -505,7 +514,7 @@ body {
     background: linear-gradient(to right, transparent, transparent 50%, #910404);
     margin: 0 1rem;
   }
-  
+   */
 
 
   /* invitation */
@@ -558,6 +567,15 @@ body {
     font-style: italic;
     color: #fafafa;
   }
+  
+
+
+  .skartio-logo{
+    width: 150px;
+    height: 30px;
+    background: white;
+    padding: 3px;
+}
   
 
 
