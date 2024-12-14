@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="christmas.css">
+ 
+
+</head>
+
+<body >
+
+    <header class="header-section" style="border-radius: 10px;">
+      <img src="./assets/bell.png" alt="Christmas Bell" class="christmas-bell" style="width: 150px; height: 150px; position: absolute; top: 20px; left: -44px;">
+
+        <div class="logo">
+            <img src="https://t4.ftcdn.net/jpg/02/51/95/45/360_F_251954530_tw838c2vxxh9bPHdOL3p8M61YF30suXb.jpg" alt="Logo" class="logo-icon">
+            <span class="logo-name">Shastha Claus</span>
+        </div>
+        <nav class="menubar">
+            <ul>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#lunch">Lunch</a></li>
+                <li><a href="#games">Games</a></li>
+                <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </nav>
+
+    </header>
+    
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div>
+            <h1>Sleigh It with Shastha</h1>
+            <p>Join us for a jolly good time filled with laughter and cheer!</p>
+        </div>
+                <!-- Container for falling flakes -->
+                <div class="falling-flakes"></div>
+
+    </section>
+
+<!-- Event Section -->
+
+<section class="event-section" id="events" >
+    <h2 class="event-section-heading">Upcoming Events</h2>
+    <div class="event-cards-container">
+      <!-- Event cards will be dynamically generated here -->
+    </div>
+  </section>
+
+<!-- lunch section -->
+
+<section class="lunch-section" id="lunch">
+  <div class="lunch-card">
+    <div class="lunch-image">
+      <img src="./assets/foood.png" alt="Lunch Image" />
+    </div>
+    <div class="lunch-description">
+      <h2>About Lunch</h2>
+      <p>
+        This Christmas, let every dish bring you closer to the festive cheer. A meal made for sharing and creating memories.
+      </p>
+    </div>
+  </div>
+  <img src="./assets/santa.png" alt="Decorative Image" class="bottom-right-image" />
+
+</section>
+
+
+<!-- Divider Section -->
+<!-- <div class="divider">
+  <img src="./assets/santa.png" alt="Decorative Image" class="divider-image" />
+  <hr class="divider-line" />
+</div> -->
+  
+<!-- games section -->
+
+<section class="games-section" id="games">
+  <h2 class="games-heading">Exciting Games</h2>
+  <div class="games-container">
+    <!-- Cards will be dynamically generated here -->
+  </div>
+</section>
+
+
+<section class="invitation">
+  <div class="invitation-card">
+    <h2 class="invitation-title">You're Invited with Love</h2>
+    <p class="invitation-message">
+      Dear Colleague,<br><br>
+      This festive season, let’s come together to celebrate the spirit of Christmas! Join us for a joyous gathering filled with warmth, laughter, and love. Your presence will make this celebration truly special. <br><br>
+      Looking forward to sharing these cherished moments with you! ❤️
+    </p>
+    <p class="invitation-details">
+      📅 Date: December 23rd, 2024<br>
+      🕒 Time: 11:00 AM<br>
+    </p>
+    <p class="invitation-closing">
+      With love,<br>
+      Shastha ❤️
+    </p>
+  </div>
+</section>
+
+  
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Shastha Systems and Solutions pvt ltd. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="christmas.js"></script>
+</body>
+
+</html>
